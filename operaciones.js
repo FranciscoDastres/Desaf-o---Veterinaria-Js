@@ -12,8 +12,6 @@ function registrar(nombre, edad, tipo, color, enfermedad) {
     }
     const citas=fs.readFileSync('citas.json','utf8')
     const JSONcitas = JSON.parse(citas)
-    // console.log(JSONcitas)
-    // console.log(JSONcitas.length)
     if (JSONcitas.length === 0){
         fs.writeFileSync('citas.json', JSON.stringify([cita],null,2)) 
     } else {
